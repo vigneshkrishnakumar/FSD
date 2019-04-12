@@ -1,0 +1,23 @@
+version: '3'
+services:
+  database:
+    image: mysql:latest
+    container_name: mysql-test-container
+    ports:
+      - 33060:33060
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=taskdb
+      - MYSQL_USER=vignesh
+      - MYSQL_PASSWORD=test123
+    volumes:
+      - /data/mysql
+  taskmanager:
+    image: vigneshkrish/taskmanager:latest
+    container_name: taskmanagerapp
+    depends_on:
+      - database
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-test-container:33060/taskdb?verifyServerCertificate=false&useSSL=false&requireSSL=false
+    ports:
+      - 8090:8090
