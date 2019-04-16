@@ -12,12 +12,6 @@ export class TaskPipe implements PipeTransform {
         priorityTo?: string,
         startDate?: string,
         endDate?: string) {
-        console.log('Task Pipe Value', value);
-        console.log('Task Pipe Args', taskName);
-        console.log('Task Pipe Args', parentTask);
-        console.log('Task Pipe Args', startDate);
-        console.log('Task Pipe Args', priorityFrom);
-        console.log('Task Pipe Args', priorityTo);
 
         if(taskName.trim() == '' && 
         parentTask.trim() == '' && 

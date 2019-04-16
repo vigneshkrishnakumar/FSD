@@ -25,7 +25,6 @@ export class TaskViewComponent implements OnInit {
   }
 
   isEnded(date) {
-    console.log("End date "+date);
     if(date <= this.endDate) {
       return true;
     } else {
@@ -37,7 +36,6 @@ export class TaskViewComponent implements OnInit {
     for(let val in this.tasks) {
       if(this.tasks[val].newTask.taskId == id) {
         this.tasks[val].newTask.endDate = formatDate(new Date(), 'yyyy-MM-dd', 'en');
-        console.log("Ended task "+this.tasks[val]);
         this.taskService.updateTask(JSON.stringify(this.tasks[val]), id)
         .then(res => {
             console.log(res);

@@ -29,8 +29,6 @@ export class TaskAddComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myForm);
-    console.log(this.myForm.value);
     this.task = {"parentTask" : this.myForm.value.taskGroup.parentTask , 
     "newTask" : {"taskName" : this.myForm.value.taskGroup.taskName,
     "startDate" : this.myForm.value.taskGroup.startDate,

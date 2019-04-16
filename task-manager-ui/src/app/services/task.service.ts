@@ -29,7 +29,6 @@ export class TaskService {
     }
 
     addTask(task: string): Promise<any> {
-        console.log('Service '+task);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
       return this.http.post(`${this.server}`, task, options)
@@ -41,7 +40,6 @@ export class TaskService {
     }
 
     updateTask(task: string, id : number): Promise<any> {
-        console.log('Service '+task);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.put(`${this.server}/updateTask/${id}`, task, options)
