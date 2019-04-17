@@ -4,16 +4,16 @@
 package com.cts.capsule.taskmanager.dao;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import com.cts.capsule.taskmanager.bean.ParentTask;
 import com.cts.capsule.taskmanager.bean.Task;
 import com.cts.capsule.taskmanager.repository.ParentTaskRepository;
 import com.cts.capsule.taskmanager.repository.TaskRepository;
 
 /**
- * @author 269012
+ * DAO class for Tasks
  *
  */
 @Repository("taskDao")
