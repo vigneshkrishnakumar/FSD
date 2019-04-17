@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * @author 269012
+ * Bean class for Task
  *
  */
 @Entity

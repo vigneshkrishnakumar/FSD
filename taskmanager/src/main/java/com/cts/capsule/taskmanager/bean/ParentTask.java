@@ -18,7 +18,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
- * @author 269012
+ * Bean class for Parent Task
  *
  */
 @Entity
